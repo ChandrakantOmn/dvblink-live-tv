@@ -183,6 +183,7 @@ class RecordingSession extends BaseTvInputService.RecordingSession {
         Log.d(TAG, "onRelease");
     }
 
+/*
     public void onStartRecording(Uri uri) {
         super.onStartRecording(uri);
         Log.d(TAG, (new StringBuilder()).append("onStartRecording: ").append(uri).toString());
@@ -202,7 +203,9 @@ class RecordingSession extends BaseTvInputService.RecordingSession {
             return;
         }
     }
+*/
 
+/*
     public void onStopRecording(final Program programToRecord) {
         Log.d(TAG, "onStopRecording");
         VBoxApp.getDeviceManager().stopRecording(mVBoxChannelId, new com.vboxcomm.android.tvinput.vbox.response.Callback.Get() {
@@ -233,7 +236,9 @@ class RecordingSession extends BaseTvInputService.RecordingSession {
             }
         });
     }
+*/
 
+/*
     public void onStopRecordingChannel(final Channel channelToRecord) {
         Log.d(TAG, "onStopRecording");
         VBoxApp.getDeviceManager().stopRecording(mVBoxChannelId, new com.vboxcomm.android.tvinput.vbox.response.Callback.Get() {
@@ -264,11 +269,22 @@ class RecordingSession extends BaseTvInputService.RecordingSession {
             }
         });
     }
+*/
 
     public void onTune(Uri uri) {
         super.onTune(uri);
         Log.d(TAG, (new StringBuilder()).append("Tune recording session to: ").append(uri).toString());
         mChannelUri = uri;
         notifyTuned(uri);
+    }
+
+    @Override
+    public void onStopRecording(Program programToRecord) {
+
+    }
+
+    @Override
+    public void onStopRecordingChannel(Channel channelToRecord) {
+
     }
 }
